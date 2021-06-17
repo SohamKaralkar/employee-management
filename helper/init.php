@@ -9,10 +9,10 @@ $di->set('hash', new Hash());
 $di->set('errorhandler', new ErrorHandler());
 $di->set('validator', new Validator($di));
 $di->set('util', new Util($di));
-$di->set('category', new Category($di));
-$di->set('customer', new Customer($di));
-$di->set('product', new Product($di));
-$di->set('supplier', new Supplier($di));
-$di->set('sales', new Sales($di));
-$di->set('invoice', new Invoice($di));
+$di->set('employee', new Employee($di));
 require_once "constants.php";
+
+function dd($data) {
+    var_dump($data);
+    die();
+}

@@ -10,3 +10,4 @@ require_once "$app/../classes/helper_classes/ErrorHandler.php";
 require_once "$app/../classes/helper_classes/Hash.php";
 require_once "$app/../classes/helper_classes/TokenHandler.php";
 require_once "$app/../classes/helper_classes/Util.php";
+require_once "$app/../classes/Employee.php";
