@@ -35,5 +35,5 @@ $("#email-field").on("click", function(){
     </div>`;
     $("#total-emails").val($emailFieldCount);
     $("#whatsapp-number").append($html);
-    $whatsappFieldCount++;
+    $emailFieldCount++;
 });
