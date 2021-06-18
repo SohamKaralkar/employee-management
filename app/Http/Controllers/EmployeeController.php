@@ -101,7 +101,7 @@ class EmployeeController extends Controller
      */
     public function edit($id)
     {
-        $employee = Employee::where("id", $id)->with("address")->with("whatsappnumber")->with("emails")->with("contacts")->first();
+        $employee = Employee::where("id", $id)->with("address")->with("whatsappnumber")->with("emails")->with("contacts")->firstOrFail();
         // dd($employee->whatsappnumber[1-1]->isPrimary());
         return view("employee.edit", compact(["employee"]));
     }
@@ -173,8 +173,8 @@ class EmployeeController extends Controller
 
     }
 
-    public function softDelete(Employee $employee)
+    public function softDelete($id)
     {
-        $employee->delete();
+        Employee::find($id)->delete();
     }
 }
